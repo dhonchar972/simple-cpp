@@ -1,1 +1,8 @@
-g++ ..\src\main.cpp ..\src\testClass.cpp -o test.exe -I .\include\
+GCC: g++
+LLVM: clang++
+
+clang++ -fcolor-diagnostics 
+        -fansi-escape-codes 
+        -g D:\programming\simple-cpp\test01\src\main.cpp D:\programming\simple-cpp\test01\src\mySimpleClass.cpp 
+        -o main.exe 
+        -I D:\programming\simple-cpp\test01\include

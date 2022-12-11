@@ -3,8 +3,12 @@
     {
       "name": "windows-clang-x64",
       "includePath": [
+<<<<<<< HEAD
         "${workspaceFolder}/**",
         "${workspaceFolder}/include"
+=======
+        "${workspaceFolder}/**"
+>>>>>>> e3db6539703cc211022e1ac76e36403d12c41abe
       ],
       "compilerPath": "D:/LLVM/bin/clang++.exe",
       "cStandard": "${default}",

@@ -1,0 +1,10 @@
+.vs/
+.vscode/
+.idea/
+x64/
+**.vcxproj.filters
+**.vcxproj.user
+
+obj/
+bin/
+**.csproj.user

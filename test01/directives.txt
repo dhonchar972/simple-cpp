@@ -1,0 +1,11 @@
+Preprocessor directives:
+    #ifdef - if defined
+    #ifndef - if not defined
+    #if
+    #endif - close
+
+    #undef
+    #define
+    #include
+    #pragma once
+    #pragma warn

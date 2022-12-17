@@ -1,0 +1,45 @@
+gcc -Wall -g main.c -lm -o main
+	"Wall" - warnings
+	"g" - generate debug info
+	"lm" - add library m(math) to build
+
+man 1 malloc
+	"1" - insatlled in systeme
+	"2" - systeme calls
+	"3" - std
+	...
+
+printf("%.5f %.5\n", (-q - d) / (2 * p), (-q + d) / (2 * p));
+
+v = scanf("%d %f %lf", &p, &q, &r);
+	"d" - decimal(int)
+	"f" - float
+	"lf" - long float(double)
+
+#include <stdio.h>
+int main()
+{
+	printf("Hello!!!\n");
+	return 0;
+}
+
+ind:
+	char - int8(8bit - 1byte), //signed, unsigned
+	short - int16(16bit - 2byte), 
+	int - int32(32bit - 3byte), 
+	long - int64(64bit - 4byte), 
+	long long - int64(64bit - 4byte)
+float:
+	float
+	double
+	long double
+
+sizeof(char) == sizeof 1
+
+Memory:
+	dec:
+		.text(code)
+		.data(gvar - initialized data)
+		.bss(uninitalized data)
+	HEAP(UP)
+	STACK(DOWN)

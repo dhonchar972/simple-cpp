@@ -1,0 +1,130 @@
+#ifndef FOO_H
+#define FOO_H
+
+	#ifdef __cplusplus
+		extern "C" {
+	#endif
+
+
+		#include "foo.h"
+		double foo(double a, int b);
+
+
+	#ifdef __cplusplus
+		}
+	#endif
+
+#endif
+
+////
+
+int i;
+int *p = &i; // pointer
+int &r = i; // reference
+i++;
+(*p)++;
+r++;
+
+void foo1(float *arr, int *val) {
+	*val = arr[0];
+}
+void foo2(float *arr, int &val) {
+	val = arr[0];
+}
+float a[10];
+float v;
+foo1(a, &v);
+foo2(a, v);
+
+////
+
+const int *const p; // constant pointer on constant value
+//val     //pointer
+
+const int &ref = 12; // constant reference
+
+void foo(const C *ptr) {}
+
+class C1 {
+	void method(int a, int b) const {} // constant method, need to work with constant variables
+};
+
+int *p = new int[200];
+C1 *p = new C1();
+delete []p;
+delete p;
+
+class CLS {
+	int *p;
+public:
+	// default constructor
+	CLS() {
+		p = new int[20];
+	}
+	// copy constructor
+	CLS(const CLS &a) { 
+		p = new int[20]
+		for(int i = 0; i < 20; i++)
+			p[i] = a.p[i];
+	}
+	// destructor
+	~CLS() {
+		delete []p;
+	}
+private:
+	...;
+friend:
+	class SomeName {
+		friend SomeName operator+(const SomeName&, const SomeName&);
+	}
+};
+
+//!!!!!!!!!!!!!!!!!Constructor with 1 parameter compiler perceives as "conversion constructor", use "explicit"!!!!!!!!!!!!
+
+class CLS {
+    int data;
+public:
+    CLS() {}
+    explicit CLS(int a) : data(a) {} // field initialization!!!
+}
+
+
+inline int foo(int x) {}
+
+Complex operator+(const Complex &a, const Complex &b) {
+	return Complex(...);
+}
+// a.operator+(b) - default, operator+(a, b) - overridden higher
+
+void operator++() {} // ++a
+void operator--() {} // --a
+void operator++(int) {} // a++
+void operator--(int) {} // a--
+
+const MyInt& operator++() { i++; return *this; }
+MyInt operator++(int) { MyInt tmp(*this); i ++; return tmp; }
+
+operator int() const {} // integer type conversion operator
+
+///////////////////////////////////Run-Time Type Information/////////////////////////////////
+unsigned int line_count_in_file(const char *file_name) {
+    FILE * f = fopen(file_name, "r");
+    if(!f)
+        throw "couldn't open file"; // throw "const char*"
+    int n = 0;
+    int c = 0;
+    while((c = fgetc(f)) != EOF)
+        if(c == '\n')
+            n++;
+    fclose(f);
+    return n;
+}
+try {
+    int res = line_count_in_file(argv[1]);
+    printf("The file %s contains %d lines\n", argv[1], res);
+} catch(const char *exception) {
+    fprintf(stderr, "Exception (string): %s\n", exception);
+    return 2;
+} catch(...) { // "..." mean "do something and throw further"
+    // free resources
+}

@@ -1,3 +1,6 @@
+#include <errno.h>
+#include <string.h>
+
 #include "file_exception.h"
 
 FileException::FileException(const char *fn, const char *cmt)

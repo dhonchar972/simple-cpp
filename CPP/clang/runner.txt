@@ -1,0 +1,43 @@
+clang++                                                                                            // Compiler.
+
+-Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wconversion -Wnull-dereference -Wsign-conversion     // Warnings.
+
+--std=c++20                                                                                        // Standart.
+
+-g3                                                                                                // Include debug information("-g", "-g0", "-g1", "-g2", "-g3").
+
+-O0                                                                                                // Optimization level("-O0", "-O1", "-O2", "-O3", "-Ofast", "-Os", "-Oz", "-Og", "-O", "-O4"), O0 means "none".
+
+-I .\include                                                                                       // Include.
+
+-c .\src\main.cpp .\src\exceptions\file_exception.cpp .\src\lines\lines.cpp                        // Files for compilation.
+
+-o .\build\Debug\main.o .\build\Debug\file_exception.o .\build\Debug\lines.o                       // Output object names.
+
+&& 
+
+clang++ 
+
+-Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wconversion -Wnull-dereference -Wsign-conversion 
+
+--std=c++20 
+
+-g3
+
+-O0 
+
+-I .\include  
+
+.\build\Debug\main.o .\build\Debug\file_exception.o .\build\Debug\lines.o                          // Linking object files.
+
+-o .\build\Debug\                                                                                  // Output executable file.
+
+Exampke:
+
+cd build && clang++ -g3 -O0 -c ..\src\main.cpp ..\src\exceptions\file_exception.cpp ..\src\lines\lines.cpp -I ..\include && cd Debug && clang++ -g3 -O0 ..\main.o ..\file_exception.o ..\lines.o -o .\proj.exe -I ..\..\include && cd ..\..
+
+cd build && clang++ -g3 -O0 ..\src\main.cpp ..\src\exceptions\file_exception.cpp ..\src\lines\lines.cpp -o .\Debug\proj.exe -I ..\include && cd ..
+
+cd build && clang++ -g3 -O0 -I ..\include -c ..\src\**.cpp && cd Debug && clang++ -g3 -O0 ..\**.o -o .\proj.exe -I ..\..\include && cd ..\..
+
+cd build && clang++ -g3 -O0 -I ..\include -c ..\src\**

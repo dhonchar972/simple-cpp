@@ -1,0 +1,21 @@
+C:/Windows/System32/cmd.exe /d /c 
+
+g++ 
+
+-Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wconversion -Wnull-dereference -Wsign-conversion 
+
+--std=c++20 
+
+Example: 
+"
+    cd build
+    g++ -g3 -O0 -I ..\include -c ..\src\main.cpp ..\src\exceptions\file_exception.cpp ..\src\lines\lines.cpp
+    g++ -g3 -O0 -I ..\include .\file_exception.o .\lines.o .\main.o -o .\Debug\prog.exe
+    cd ..
+"
+cd build && g++ -g3 -O0 -I ..\include -c ..\src\main.cpp ..\src\exceptions\file_exception.cpp ..\src\lines\lines.cpp && g++ -g3 -O0 -I ..\include .\file_exception.o .\lines.o .\main.o -o .\Debug\prog.exe && cd ..
+
+Run: .\Debug\prog.exe ..\runner.txt
+
+For console work: Project select > Properties > Linker > System > SubSystem > Console
+

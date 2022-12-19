@@ -1,0 +1,37 @@
+"D:\VS2022\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" x64  // Visual Studio 2022 Developer Command Prompt (mstools).
+
+&&  
+
+cd D:\programming\simple-cpp\CPP                                                        // Work folder.
+
+&&
+
+cl                                                                                      // Tool that controls the Microsoft C++ (MSVC) C and C++ compilers and linker.
+
+/W4 /w14242 /w14287 /w14296 /w14311 /w14826 /w44062 /w44242 /w14263 /w44265 /w14928     // Warnings.
+
+/std:c++20                                                                              // C++ standart(2020).
+
+/Od                                                                                     // Turns off all optimizations in the program and speeds compilation.
+
+/Zi                                                                                     // /Z7 - debug info in same file, 
+                                                                                           /Zi - debug info in separate PDB file, 
+                                                                                           /ZI - debug info in separate PDB file in a format that supports the Edit and Continue feature.
+
+/EHsc                                                                                   // EHsc, /EHa (synchronous and asynchronous exception handling).
+
+/I .\include                                                                            // Include.
+
+/Fd .\x64\Debug\                                                                        // Program Database File Name(myproj.pdb).
+
+/Fo .\x64\Debug\                                                                        // Object File Name(myproj.obj).
+
+/Fe .\x64\Debug\                                                                        // Output file name(myproj.exe).
+
+.\src\main.cpp .\src\exceptions\file_exception.cpp .\src\lines\lines.cpp                // Files for compilation
+
+Example: cl /W4 /w14242 /w14287 /w14296 /w14311 /w14826 /w44062 /w44242 /w14263 /w44265 /w14928 /std:c++20 /Od /Zi /EHsc /I.\include /Fd.\x64\Debug\ /Fo.\x64\Debug\ /Fe.\x64\Debug\  .\src\main.cpp .\src\exceptions\file_exception.cpp .\src\lines\lines.cpp
+
+For normal clonsole work: Solution > Select Project > Properties > Linker > System > change Subsystem to "Console"
+
+Run code: .\x64\Debug\main CPP.txt

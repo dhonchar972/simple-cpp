@@ -15,15 +15,20 @@ set(SOURCES
     src/exceptions/file_exception.cpp
     src/lines/lines.cpp
 )
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -Wall")
+#set(Boost_USE_STATIC_LIBS OFF)
+#set(Boost_USE_MULTITHREADED ON)
+#find_package(Boost COMPONENTS chrono filesystem REQUIRED)
 
 add_executable(CMakeExample ${SOURCES})
-#add_library(${LIBRARY_NAME} OBJECT ${SOURCES})
+#add_library(foo STATIC ${SOURCE_LIB}) # STATIC, SHARED
+#add_definitions(-DSOME_IMPORTANT_DEFINITION)
 
 if (CMAKE_VERSION VERSION_GREATER 3.13)
   set_property(TARGET CMakeExample PROPERTY CXX_STANDARD 20)
 endif()
 
-target_include_directories(CMakeExample PUBLIC include/)
+target_include_directories(CMakeExample PUBLIC include/)  # include_directories("headers/" "more_headers/")
 
 #target_link_libraries(CMakeExample PRIVATE ${LIBRARY_NAME})
 

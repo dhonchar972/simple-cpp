@@ -1,2 +1,5 @@
 **Debug/
 CMakeLists.txt.user
+out/
+.vs/
+.vscode/

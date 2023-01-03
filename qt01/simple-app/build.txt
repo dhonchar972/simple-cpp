@@ -1,0 +1,18 @@
+cmake -DCMAKE_PREFIX_PATH="D:/Qt/6.4.1/msvc2019_64" -DCMAKE_CXX_COMPILER="D:/VS2022/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe" -G Ninja -S ..\ -B .\
+
+cd /d/programming/simple-qt/qt01/simple-app/simple-app/build/
+cmake -DCMAKE_PREFIX_PATH=/d/Qt/6.4.1/mingw_64/ -G Ninja -S ../ -B ./
+
+/d/Qt/6.4.1/mingw_65/bin/
+/d/Qt/6.4.1/msvc2019_64/bin
+
+platforms/qwindows.dll
+Qt6Widgets.dll
+Qt6Core.dll
+Qt6Gui.dll
+
+
+d/Qt/6.4.1/mingw_64/bin/windeployqt.exe --quick --release .
+
+
+cmake -DCMAKE_PREFIX_PATH=/d/Qt/6.4.1/msvc2019_64/ -G Ninja -S ../ -B ./

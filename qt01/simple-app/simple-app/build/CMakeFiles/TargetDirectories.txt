@@ -1,0 +1,9 @@
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/simple-app.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/edit_cache.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/rebuild_cache.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/list_install_components.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/install.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/install/local.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/install/strip.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/simple-app_autogen_timestamp_deps.dir
+D:/programming/simple-qt/qt01/simple-app/simple-app/build/CMakeFiles/simple-app_autogen.dir
